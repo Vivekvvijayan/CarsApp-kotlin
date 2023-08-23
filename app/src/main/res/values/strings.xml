@@ -12,4 +12,5 @@
     <string name="label_mfr_id">Mfr_Name : </string>
     <string name="label_recycler_view">Vehicle Type</string>
     <string name="back_btn_label">Back</string>
+    <string name="toolbar_title">Cars World</string>
 </resources>

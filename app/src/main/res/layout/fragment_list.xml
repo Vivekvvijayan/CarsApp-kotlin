@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".List">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/quotes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/rounded_curve"
+                android:minHeight="80dp">
+
+                <TextView
+                    android:id="@+id/quoteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_italics"
+                    android:padding="10dp"
+                    android:textColor="@color/border"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/refreshBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/refresh" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/listHead"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/quotes">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/car" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="List of Manufactures"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        recycler view -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerLists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/listHead" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

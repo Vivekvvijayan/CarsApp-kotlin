@@ -1,11 +1,12 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-parcelize")
-
 }
 
 android {
+
     namespace = "com.example.carsapp"
     compileSdk = 33
 
@@ -17,6 +18,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -39,7 +41,6 @@ android {
 dependencies {
 
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("org.jetbrains.kotlinx:kotlinx-parcelize-runtime:1.2.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")

@@ -58,36 +58,31 @@ class List : Fragment(), ListAdapter.ItemClickListener {
         viewmodel.quotes.observe(viewLifecycleOwner) { result ->
             quoteText.text = "\"${result[0]}\""
         }
-
         refreshBtn.setOnClickListener {
             viewmodel.getRandomQuotes()
         }
-
         //observer for list
-
         viewmodel.manuList.observe(viewLifecycleOwner) { result ->
-
             var adapter = ListAdapter(result, this)
             recyclerview.adapter = adapter
         }
-
     }
-
     override fun onItemClick(clickedItem: Data) {
         // Here, you have access to the clickedItem
-
-        val detailsFragment = List_details.newInstance("", "")
+        val detailsFragment = List_details.newInstance("","")
 
         var args = Bundle()
-        args.putParcelable("manu_data",clickedItem)
-        detailsFragment.arguments = args
 
+        args?.apply {
+            putParcelable("country",clickedItem)
+        }
+
+        detailsFragment.arguments = args
 
         parentFragmentManager.beginTransaction()
             .replace(R.id.container, detailsFragment, "new").addToBackStack(null)
             .commit()
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

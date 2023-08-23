@@ -2,4 +2,14 @@
     <string name="app_name">CarApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_screen_text">Cars World</string>
+    <string name="list_head_title">List of Manufactures</string>
+    <string name="list_left_head">Country</string>
+    <string name="list_right_head">Mfr_common_name</string>
+    <string name="label_country">Country : </string>
+    <string name="label_common_name">Mft_CommonName: </string>
+    <string name="label_id">Mfr_ID : </string>
+    <string name="label_mfr_id">Mfr_Name : </string>
+    <string name="label_recycler_view">Vehicle Type</string>
+    <string name="back_btn_label">Back</string>
 </resources>

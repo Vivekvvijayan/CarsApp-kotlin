@@ -6,6 +6,7 @@
     <color name="dark_bg">#eecbc3</color>
     <color name="border">#d6d4d3</color>
     <color name="text_black">#0b2239</color>
-    <color name="list_gray">#dbdce1</color>
+    <color name="list_gray">#c8d6e5</color>
+    <color name="text_header">#808080</color>
 
 </resources>

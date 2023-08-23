@@ -15,14 +15,12 @@ class ListAdapter(var listItems: List<Data>,private val itemClickListener:ItemCl
     interface ItemClickListener{
 
         fun onItemClick(clickedItem: Data)
-
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var countryName = itemView.findViewById<TextView>(R.id.countryName)
         var companyName = itemView.findViewById<TextView>(R.id.companyName)
         var listItem = itemView.findViewById<LinearLayout>(R.id.listItem)
-
         init {
             listItem.setOnClickListener {
 
@@ -30,12 +28,7 @@ class ListAdapter(var listItems: List<Data>,private val itemClickListener:ItemCl
                 itemClickListener.onItemClick(clickedItem)
             }
         }
-
-
     }
-
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.ViewHolder {
         var inflatedLayout =

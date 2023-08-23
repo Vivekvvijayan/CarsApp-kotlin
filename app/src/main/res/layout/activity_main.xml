@@ -9,14 +9,14 @@
 
     <!--  fragment 1-->
 
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+     />
 
     <!--  fragment 1-->
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

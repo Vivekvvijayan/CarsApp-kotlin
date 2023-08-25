@@ -9,9 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.carsapp.R
 import com.example.carsapp.modal.Data
 
-class CarsAdapter(private val carsList: List<Data>, private val itemClickListener: ItemClickListener) :
+class CarsAdapter(
+    private val carsList: List<Data>,
+    private val itemClickListener: ItemClickListener
+) :
     RecyclerView.Adapter<CarsAdapter.ViewHolder>() {
-
 
     interface ItemClickListener {
         fun onItemClick(clickedItem: Data)
@@ -20,13 +22,13 @@ class CarsAdapter(private val carsList: List<Data>, private val itemClickListene
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val countryTextView: TextView
         val companyTextView: TextView
-        val CarsListItem: LinearLayout
+        val carsListItem: LinearLayout
 
         init {
             itemView.apply {
                 countryTextView = findViewById<TextView>(R.id.countryName)
                 companyTextView = findViewById<TextView>(R.id.companyName)
-                CarsListItem = findViewById<LinearLayout>(R.id.listItem)
+                carsListItem = findViewById<LinearLayout>(R.id.listItem)
             }
         }
     }
@@ -44,7 +46,7 @@ class CarsAdapter(private val carsList: List<Data>, private val itemClickListene
                 countryTextView.text = Country
                 companyTextView.text = Mfr_CommonName
             }
-            CarsListItem.setOnClickListener {
+            carsListItem.setOnClickListener {
                 val clickedItem = carsList[position]
                 itemClickListener.onItemClick(clickedItem)
             }
@@ -53,7 +55,6 @@ class CarsAdapter(private val carsList: List<Data>, private val itemClickListene
     }
 
     override fun getItemCount() = carsList.size
-
 
 }
 

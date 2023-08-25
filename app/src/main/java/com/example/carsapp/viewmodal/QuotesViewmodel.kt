@@ -15,8 +15,6 @@ class QuotesViewmodel : ViewModel() {
 
     private var quoteAPI = RetrofitHelper().getQuotesInstance().create(QuotesInterface::class.java) //api setup for quotes
     private var listAPI = RetrofitHelper().getCarsInstance().create(CarsInterface::class.java)
-
-
     //    get random quotes
     fun getRandomQuotes() {
 //        logic to call api

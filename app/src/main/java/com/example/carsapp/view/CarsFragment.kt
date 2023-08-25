@@ -25,12 +25,9 @@ class CarsFragment : Fragment(), CarsAdapter.ItemClickListener {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         var recyclerview = view.findViewById<RecyclerView>(R.id.recylerLists)
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
-
         viewmodel = ViewModelProvider(this).get(QuotesViewmodel::class.java)
-
         viewmodel.apply {
             getRandomQuotes()
             getCarManufacureList()
@@ -52,15 +49,11 @@ class CarsFragment : Fragment(), CarsAdapter.ItemClickListener {
     override fun onItemClick(clickedItem: Data) {
         // Here, you have access to the clickedItem
         val detailsFragment = DetailsFragment.newInstance()
-
         var args = Bundle()
-
         args.apply {
             putParcelable("country", clickedItem)
         }
-
         detailsFragment.arguments = args
-
         parentFragmentManager.beginTransaction()
             .replace(R.id.container, detailsFragment, "new").addToBackStack(null)
             .commit()
@@ -72,7 +65,6 @@ class CarsFragment : Fragment(), CarsAdapter.ItemClickListener {
     ): View? {
         // Inflate the layout for this fragment
         var inflatedView = inflater.inflate(R.layout.fragment_list, container, false)
-
         with(inflatedView) {
             quoteTextView = findViewById(R.id.quoteText)
             refreshBtn = findViewById(R.id.refreshBtn)

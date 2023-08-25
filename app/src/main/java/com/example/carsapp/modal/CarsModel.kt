@@ -6,7 +6,6 @@ import kotlinx.parcelize.Parcelize
 data class CarsModel(
     var Results: List<Data>
 )
-
 @Parcelize
 data class Data(
     var Country: String,

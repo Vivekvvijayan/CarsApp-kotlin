@@ -4,9 +4,10 @@
     android:id="@+id/listItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="3dp"
-    android:layout_marginHorizontal="7dp"
+    android:layout_marginVertical="@dimen/spacing_8dp"
+    android:layout_marginHorizontal="@dimen/spacing_8dp"
     android:background="@drawable/list_layout">
+
 
     <TextView
         android:id="@+id/countryName"

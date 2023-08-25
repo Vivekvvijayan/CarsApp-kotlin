@@ -1,4 +1,4 @@
-package com.example.carsapp.RetrofitConfig
+package com.example.carsapp.retrofitConfig
 
 import com.example.carsapp.modal.CarsModel
 import retrofit2.Response

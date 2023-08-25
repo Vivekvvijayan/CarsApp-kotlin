@@ -1,6 +1,5 @@
-package com.example.carsapp.RetrofitConfig
+package com.example.carsapp.retrofitConfig
 
-import com.example.carsapp.modal.Quotesmodel
 import retrofit2.Response
 import retrofit2.http.GET
 

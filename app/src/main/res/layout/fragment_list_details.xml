@@ -1,132 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".List_details">
-
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_8dp"
+    tools:context=".DetailsFragment">
 
     <LinearLayout
-        android:id="@+id/details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/list_layout"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_country"
-        android:fontFamily="@font/poppins_bold"
-        android:textSize="14sp"
-        android:textColor="@color/white"
-        />
-    <TextView
-        android:id="@+id/country_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:fontFamily="@font/poppins_italics"
-         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/label_country"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
-
-</LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:text="@string/label_common_name" />
-    <TextView
-        android:id="@+id/commonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:fontFamily="@font/poppins_italics"
-       />
-</LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:text="@string/label_id" />
-    <TextView
-        android:id="@+id/ids"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_italics"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-      />
-
-</LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:text="@string/label_mfr_id" />
-    <TextView
-        android:id="@+id/manName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginLeft="2dp"
-        android:fontFamily="@font/poppins_italics"
-      />
-
-</LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:gravity="center"
-
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/text_green"
-                android:textSize="14sp"
-                android:layout_marginLeft="2dp"
-                android:text="@string/label_recycler_view" />
-<!--            recycler view -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_vehicleType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_italics"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/label_common_name"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/commonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_italics"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/label_id"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_italics"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/label_mfr_id"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/manName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_italics"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/label_recycler_view"
+            android:textColor="@color/text_green"
+            android:textSize="14sp" />
+        <!--            recycler view -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_vehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

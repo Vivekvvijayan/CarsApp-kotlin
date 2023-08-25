@@ -10,6 +10,7 @@ class RetrofitHelper {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
     fun getQuotesInstance(): Retrofit {
         return Retrofit.Builder().baseUrl(Constants.BASE_URL_QUOTES)
             .addConverterFactory(GsonConverterFactory.create())

@@ -13,8 +13,10 @@ class QuotesViewmodel : ViewModel() {
     var quotes = MutableLiveData<List<String>>()
     var carsDataList = MutableLiveData<List<Data>>()
 
-    private var quoteAPI = RetrofitHelper().getQuotesInstance().create(QuotesInterface::class.java) //api setup for quotes
+    private var quoteAPI = RetrofitHelper().getQuotesInstance()
+        .create(QuotesInterface::class.java) //api setup for quotes
     private var listAPI = RetrofitHelper().getCarsInstance().create(CarsInterface::class.java)
+
     //    get random quotes
     fun getRandomQuotes() {
 //        logic to call api

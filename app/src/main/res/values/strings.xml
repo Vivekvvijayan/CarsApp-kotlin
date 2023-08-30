@@ -13,6 +13,11 @@
     <string name="label_recycler_view">Vehicle Type</string>
     <string name="back_btn_label">Back</string>
     <string name="toolbar_title">Cars World</string>
+    <string name="login_title">Login Here</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn_label">Login</string>
+
 
 
 </resources>

@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.carsapp.MainActivity
 import com.example.carsapp.R
+import com.example.carsapp.constants.Constants
 import com.example.carsapp.viewmodal.LoginViewmodel
 import com.example.carsapp.viewmodal.QuotesViewmodel
 import com.example.carsapp.viewmodel
@@ -27,6 +28,7 @@ class LoginFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loginViewmodel = ViewModelProvider(this).get(LoginViewmodel::class.java)
@@ -37,7 +39,11 @@ class LoginFragment : Fragment() {
                     passwordTextView.text.toString()
                 )
                 if (!isValid) {
-                    Toast.makeText(requireContext(), "Please fill blanks", Toast.LENGTH_SHORT)
+                    Toast.makeText(
+                        requireContext(),
+                        Constants.FIELD_BLANK_MESSAGE,
+                        Toast.LENGTH_SHORT
+                    )
                         .show()
                 } else {
                     loginUser(
@@ -50,11 +56,16 @@ class LoginFragment : Fragment() {
 
         loginViewmodel.liveData.observe(viewLifecycleOwner) { result ->
             if (result) {
-                Toast.makeText(requireContext(), "Login Success!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    Constants.LOGIN_SUCCESS_MESSAGE,
+                    Toast.LENGTH_SHORT
+                ).show()
                 var intent = Intent(requireContext(), MainActivity::class.java)
                 startActivity(intent)
             } else {
-                Toast.makeText(requireContext(), "Invalid credentials!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), Constants.LOGIN_FAIL_MESSAGE, Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }

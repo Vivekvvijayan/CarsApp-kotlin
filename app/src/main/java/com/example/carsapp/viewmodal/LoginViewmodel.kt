@@ -26,8 +26,6 @@ class LoginViewmodel : ViewModel() {
             } catch (e: Exception) {
                 println(e.message)
             }
-
-
         }
 
     }

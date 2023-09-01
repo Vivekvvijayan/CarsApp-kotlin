@@ -17,6 +17,12 @@
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_btn_label">Login</string>
+    <string name="profileScreen_id_label">ID</string>
+    <string name="profileScreen_username_label">Username</string>
+    <string name="profileScreen_email_label">Email</string>
+    <string name="profileScreen_fullname_label">Full Name</string>
+    <string name="profileScreen_gender_label">Gender</string>
+
 
 
 

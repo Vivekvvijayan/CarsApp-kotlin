@@ -20,7 +20,16 @@
             android:background="@color/list_gray"
             android:elevation="4dp"
             app:title="@string/toolbar_title"
-            app:titleTextColor="@color/text_green" />
+            app:titleTextColor="@color/text_green">
+
+            <ImageView
+                android:id="@+id/profileScreenBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/spacing_8dp"
+                android:src="@drawable/user" />
+        </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
             android:id="@+id/container"

@@ -32,9 +32,9 @@ class DetailsFragment : Fragment() {
             idTextView = findViewById(R.id.ids)
             comminNameTextView = findViewById(R.id.commonName)
             manNameTextView = findViewById(R.id.manName)
-
             recyclerVehicleType = findViewById(R.id.recycler_vehicleType)
             recyclerVehicleType.layoutManager = LinearLayoutManager(requireContext())
+
             recieveData?.let {
                 countryTextView.text = it.Country
                 idTextView.text = it.Mfr_ID.toString()
@@ -42,7 +42,7 @@ class DetailsFragment : Fragment() {
                 manNameTextView.text = it.Mfr_Name
 
                 it?.let {
-                    var adapter = VehicleTypeAdapter(it.VehicleTypes)
+                    val adapter = VehicleTypeAdapter(it.VehicleTypes)
                     recyclerVehicleType.adapter = adapter
                 }
             }

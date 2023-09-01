@@ -1,6 +1,8 @@
 package com.example.carsapp.view
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ import com.example.carsapp.constants.Constants
 import com.example.carsapp.viewmodal.LoginViewmodel
 import com.example.carsapp.viewmodal.QuotesViewmodel
 import com.example.carsapp.viewmodel
+import com.google.gson.Gson
 
 lateinit var loginViewmodel: LoginViewmodel
 
@@ -25,6 +28,7 @@ class LoginFragment : Fragment() {
     lateinit var usernameTextView: TextView
     lateinit var passwordTextView: TextView
     lateinit var loginBtn: Button
+    lateinit var sharedPref: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -68,6 +72,20 @@ class LoginFragment : Fragment() {
                     .show()
             }
         }
+
+        loginViewmodel.responseBody.observe(viewLifecycleOwner) { result ->
+            sharedPref = requireContext().getSharedPreferences("myPref", Context.MODE_PRIVATE)
+            try {
+                val edit = sharedPref.edit()
+                val userData = Gson().toJson(result)
+                edit.putString("user_data", userData)
+                edit.apply()
+            } catch (e: Exception) {
+                println(e.message)
+            }
+        }
+
+
     }
 
     override fun onCreateView(

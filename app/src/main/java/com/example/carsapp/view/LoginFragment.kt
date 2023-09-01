@@ -74,11 +74,11 @@ class LoginFragment : Fragment() {
         }
 
         loginViewmodel.responseBody.observe(viewLifecycleOwner) { result ->
-            sharedPref = requireContext().getSharedPreferences("myPref", Context.MODE_PRIVATE)
+            sharedPref = requireContext().getSharedPreferences(Constants.SHAREPREFERECEKEY, Context.MODE_PRIVATE)
             try {
                 val edit = sharedPref.edit()
                 val userData = Gson().toJson(result)
-                edit.putString("user_data", userData)
+                edit.putString(Constants.PROFILE_DATA_KEY, userData)
                 edit.apply()
             } catch (e: Exception) {
                 println(e.message)

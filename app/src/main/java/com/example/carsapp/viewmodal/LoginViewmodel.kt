@@ -18,13 +18,17 @@ class LoginViewmodel : ViewModel() {
     fun validateInput(username: String, password: String): Boolean {
         return !(username.isEmpty() || password.isEmpty())
     }
+
     fun loginUser(username: String, password: String) {
         val loginRequest = LoginRequest(username, password)
         viewModelScope.launch {
             try {
                 var res = loginApi.getUsers(loginRequest)
-                liveData.value = res.isSuccessful
-                responseBody.value = res.body()
+
+                res?.let {
+                    liveData.value = it.isSuccessful
+                    responseBody.value = it.body()
+                }
             } catch (e: Exception) {
                 println(e.message)
             }

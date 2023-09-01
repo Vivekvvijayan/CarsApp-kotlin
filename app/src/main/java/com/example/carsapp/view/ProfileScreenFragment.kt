@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.carsapp.R
+import com.example.carsapp.constants.Constants
 import com.example.carsapp.modal.LoginRes
 import com.example.carsapp.utils.setImage
 import com.google.gson.Gson
@@ -34,7 +35,7 @@ class ProfileScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var inflatedView = inflater.inflate(R.layout.fragment_profile_screen, container, false)
+        val inflatedView = inflater.inflate(R.layout.fragment_profile_screen, container, false)
         with(inflatedView) {
             idTextView = findViewById(R.id.idTextView)
             usernameTextView = findViewById(R.id.usernameTextView)
@@ -45,11 +46,14 @@ class ProfileScreenFragment : Fragment() {
         }
         return inflatedView
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var sharedPref = requireContext().getSharedPreferences("myPref", Context.MODE_PRIVATE)
-        val userData = sharedPref.getString("user_data", null)
-        if (userData != null) {
+        val sharedPref =
+            requireContext().getSharedPreferences(Constants.SHAREPREFERECEKEY, Context.MODE_PRIVATE)
+        val userData = sharedPref.getString(Constants.PROFILE_DATA_KEY, null)
+
+        userData?.let {
             val finalUserData = Gson().fromJson(userData, LoginRes::class.java)
             finalUserData.apply {
                 idTextView.text = id.toString()

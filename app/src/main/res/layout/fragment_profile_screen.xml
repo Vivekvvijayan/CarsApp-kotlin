@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/poppins_bold"
-        android:textSize="21sp"
-        android:textColor="@color/white"
         android:padding="@dimen/spacing_8dp"
-        android:text="@string/profileScreen_heading"/>
+        android:text="@string/profileScreen_heading"
+        android:textColor="@color/white"
+        android:textSize="21sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"
@@ -37,8 +37,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/spacing_8dp"
+        android:orientation="horizontal"
         android:padding="@dimen/spacing_8dp">
 
         <TextView
@@ -89,8 +89,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/spacing_8dp"
+        android:orientation="horizontal"
         android:paddingHorizontal="@dimen/spacing_8dp">
 
         <TextView
@@ -114,8 +114,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/spacing_8dp"
+        android:orientation="horizontal"
         android:paddingHorizontal="@dimen/spacing_8dp">
 
         <TextView
@@ -140,8 +140,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/spacing_8dp"
+        android:orientation="horizontal"
         android:paddingHorizontal="@dimen/spacing_8dp">
 
         <TextView
@@ -154,11 +154,11 @@
             android:textSize="16sp" />
 
         <TextView
-            android:textAllCaps="true"
             android:id="@+id/genderTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="16sp" />
     </LinearLayout>

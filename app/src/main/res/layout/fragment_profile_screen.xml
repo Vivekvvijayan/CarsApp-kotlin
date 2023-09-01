@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".view.ProfileScreenFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:padding="@dimen/spacing_8dp"
+        android:text="@string/profileScreen_heading"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="80dp"

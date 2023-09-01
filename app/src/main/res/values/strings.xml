@@ -22,6 +22,7 @@
     <string name="profileScreen_email_label">Email</string>
     <string name="profileScreen_fullname_label">Full Name</string>
     <string name="profileScreen_gender_label">Gender</string>
+    <string name="profileScreen_heading">Profile Info</string>
 
 
 
